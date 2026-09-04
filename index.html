@@ -2,148 +2,669 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Radhika — free educational sessions on market concepts, chart reading and trading awareness.">
+
+<title>Radhika | Learning Community</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+/* =========================
+   RESET
+========================= */
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+html{
+    scroll-behavior:smooth;
+}
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+body{
+    font-family:'Inter',Arial,sans-serif;
+    background:#170304;
+    color:#f2ece9;
+    -webkit-text-size-adjust:100%;
+}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
 
-  .feature-item:last-child { border-bottom: none; }
+/* =========================
+   MAIN PAGE
+========================= */
 
-  .icon { margin-right: 12px; font-size: 16px; }
+.page{
+    width:100%;
+    min-height:100vh;
+    min-height:100dvh;
+    overflow-x:hidden;
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(255,196,0,.14),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #240607 0%,
+            #170304 55%,
+            #120203 100%
+        );
+}
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+.container{
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+    padding:
+        max(24px, env(safe-area-inset-top))
+        18px
+        max(20px, env(safe-area-inset-bottom));
+}
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+/* =========================
+   EDUCATIONAL BADGE
+========================= */
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+.edu-badge{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:fit-content;
+    margin:0 auto 22px;
+
+    padding:8px 16px;
+
+    border-radius:100px;
+
+    border:1px solid rgba(255,196,0,.3);
+    background:rgba(255,196,0,.08);
+
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.2px;
+    color:#ffd558;
+}
+
+.edu-badge svg{
+    width:14px;
+    height:14px;
+    flex-shrink:0;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:22px;
+}
+
+.profile{
+    width:132px;
+    height:132px;
+
+    padding:4px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd000,
+            #8a5a00,
+            #ffd000
+        );
+
+    box-shadow:
+        0 0 0 1px rgba(255,196,0,.15),
+        0 12px 36px rgba(0,0,0,.4);
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid #1a0405;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.name{
+    text-align:center;
+
+    font-family:'Fraunces',Georgia,serif;
+    font-size:30px;
+    font-weight:700;
+    line-height:1.15;
+
+    letter-spacing:-.2px;
+
+    margin-bottom:6px;
+}
+
+.market{
+    text-align:center;
+
+    color:#c9a24a;
+
+    font-size:13.5px;
+    font-weight:600;
+
+    letter-spacing:1.6px;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description{
+    text-align:center;
+
+    color:#d6c9c6;
+
+    font-size:15.5px;
+    line-height:1.55;
+
+    max-width:340px;
+    margin:0 auto 26px;
+}
+
+.description strong{
+    color:#f2ece9;
+    font-weight:600;
+}
+
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+.telegram-btn{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+    min-height:56px;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffcf33,
+            #e5a300
+        );
+
+    color:#1a0e00;
+
+    text-decoration:none;
+
+    font-size:16.5px;
+    font-weight:700;
+
+    letter-spacing:.1px;
+
+    box-shadow:
+        0 8px 22px rgba(230,163,0,.24),
+        inset 0 1px 0 rgba(255,255,255,.35);
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        opacity .15s ease;
+
+    user-select:none;
+}
+
+.telegram-btn:active{
+    transform:scale(.98);
+    box-shadow:0 4px 14px rgba(230,163,0,.2);
+}
+
+.telegram-btn.disabled{
+    opacity:.6;
+    pointer-events:none;
+}
+
+.telegram-icon{
+    width:20px;
+    height:20px;
+
+    flex:0 0 20px;
+
+    fill:#1a0e00;
+}
+
+
+/* =========================
+   FEATURE LIST
+========================= */
+
+.features{
+    margin-top:30px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.feature{
+    display:flex;
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:16px;
+
+    border:1px solid rgba(201,162,74,.22);
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.02);
+}
+
+.feature-icon{
+    flex:0 0 40px;
+
+    width:40px;
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:rgba(255,196,0,.09);
+
+    color:#ffc400;
+
+    font-size:17px;
+}
+
+.feature-body{
+    flex:1;
+    min-width:0;
+    padding-top:2px;
+}
+
+.feature-title{
+    font-size:15.5px;
+    font-weight:600;
+    color:#f2ece9;
+    line-height:1.3;
+    margin-bottom:3px;
+}
+
+.feature-text{
+    color:#a99a9a;
+    font-size:13.5px;
+    line-height:1.45;
+}
+
+
+/* =========================
+   SECOND BUTTON
+========================= */
+
+.bottom-btn{
+    margin-top:28px;
+}
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer{
+    text-align:center;
+
+    color:#7d6e6e;
+
+    font-size:12px;
+    line-height:1.55;
+
+    margin-top:26px;
+
+    padding:14px 14px 0;
+
+    border-top:1px solid rgba(255,255,255,.06);
+}
+
+.disclaimer a{
+    color:#a8895a;
+}
+
+.footer-note{
+    text-align:center;
+    color:#5f5252;
+    font-size:11px;
+    margin-top:14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:400px){
+
+    .container{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .profile{
+        width:112px;
+        height:112px;
+    }
+
+    .name{
+        font-size:26px;
+    }
+
+    .description{
+        font-size:15px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+    .telegram-btn{
+        transition:none;
+    }
+}
+
+
+/* =========================
+   FOCUS VISIBILITY
+========================= */
+
+.telegram-btn:focus-visible{
+    outline:2px solid #ffe27a;
+    outline-offset:3px;
+}
+
 </style>
 </head>
+
+
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<div class="page">
 
-  <h1>Munaaf</h1>
+<div class="container">
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+    <!-- =========================
+         EDUCATIONAL BADGE
+    ========================== -->
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+    <div class="edu-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L2 8L12 13L22 8L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M6 10.5V16C6 16 8.5 18.5 12 18.5C15.5 18.5 18 16 18 16V10.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        Educational content only
+    </div>
 
-  <p class="hindi-quote">     ,     </p>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
+    <!-- =========================
+         PROFILE PHOTO
+    ========================== -->
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
+    <div class="profile-wrap">
+
+        <div class="profile">
+
+            <img
+                src="https://i.ibb.co/TMht95F1/IMG-20260303-162957-628.jpg"
+                alt="Radhika"
+                loading="eager"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         NAME
+    ========================== -->
+
+    <h1 class="name">
+        Radhika
+    </h1>
+
+    <div class="market">
+        LEARNING COMMUNITY
+    </div>
+
+
+    <!-- =========================
+         DESCRIPTION
+    ========================== -->
+
+    <p class="description">
+        Free sessions on <strong>market concepts</strong>, <strong>chart reading</strong> and trading awareness — built for people who want to learn, not follow tips.
+    </p>
+
+
+    <!-- =========================
+         TELEGRAM BUTTON 1
+    ========================== -->
+
+    <a
+        class="telegram-btn"
+        href="https://telegram.me/+DCItJWHMqPBlNjFl"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <svg
+            class="telegram-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <path d="M21.9 3.1c.3-1.2-.5-1.7-1.5-1.3L2.2 9.1c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.3c.2.6.1.9.5.9.3 0 .5-.1.7-.3l2.2-2.1 4.6 3.4c.8.4 1.4.2 1.6-.8L21.9 3.1zM7.4 11.5l10.8-6.8c.5-.3.9-.1.5.2l-9 8.1-.3 3.2-1.5 4.7-1.5-4.7-2.9-.9c-.6-.2-.6-.5.4-.9z"/>
+
+        </svg>
+
+        Join the learning group
+
+    </a>
+
+
+    <!-- =========================
+         FEATURE LIST
+    ========================== -->
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">📘</div>
+
+            <div class="feature-body">
+                <div class="feature-title">Learning & educational sessions</div>
+                <div class="feature-text">Concepts explained step by step, aimed at building your own understanding.</div>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">📊</div>
+
+            <div class="feature-body">
+                <div class="feature-title">Market concepts & awareness</div>
+                <div class="feature-text">How markets move and why — the reasoning behind the numbers.</div>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">📈</div>
+
+            <div class="feature-body">
+                <div class="feature-title">Chart reading concepts</div>
+                <div class="feature-text">Reading price charts and patterns as a learning exercise.</div>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">💬</div>
+
+            <div class="feature-body">
+                <div class="feature-title">Case discussions</div>
+                <div class="feature-text">Real examples broken down together with the community.</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         TELEGRAM BUTTON 2
+    ========================== -->
+
+    <div class="bottom-btn">
+
+        <a
+            class="telegram-btn"
+            href="https://telegram.me/+DCItJWHMqPBlNjFl"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <svg
+                class="telegram-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+
+                <path d="M21.9 3.1c.3-1.2-.5-1.7-1.5-1.3L2.2 9.1c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.7 5.3c.2.6.1.9.5.9.3 0 .5-.1.7-.3l2.2-2.1 4.6 3.4c.8.4 1.4.2 1.6-.8L21.9 3.1zM7.4 11.5l10.8-6.8c.5-.3.9-.1.5.2l-9 8.1-.3 3.2-1.5 4.7-1.5-4.7-2.9-.9c-.6-.2-.6-.5.4-.9z"/>
+
+            </svg>
+
+            Join the learning group
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         DISCLAIMER
+    ========================== -->
+
+    <p class="disclaimer">
+        This community shares educational content only and does not provide investment advice, buy/sell recommendations, or guaranteed returns. Trading and investing carry risk — please do your own research and consult a SEBI-registered advisor before making financial decisions.
+    </p>
+
+    <p class="footer-note">
+        This site is not part of Facebook™ or endorsed by Facebook™.
+    </p>
+
+
 </div>
 
+</div>
+
+
+<!-- =========================
+     DOUBLE-CLICK PROTECTION
+========================= -->
+
+<script>
+
+(function(){
+
+    const buttons =
+        document.querySelectorAll(".telegram-btn");
+
+    buttons.forEach(function(button){
+
+        let locked = false;
+
+        button.addEventListener("click",function(){
+
+            if(locked){
+                return;
+            }
+
+            locked = true;
+
+            button.classList.add("disabled");
+
+            setTimeout(function(){
+
+                locked = false;
+
+                button.classList.remove("disabled");
+
+            },1500);
+
+        });
+
+    });
+
+})();
+
+</script>
+
+
 </body>
+  
 </html>
